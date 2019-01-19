@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>背景颜色覆盖</title>
+  <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+  <style>
+    .active {
+      width: 100px;
+      height: 100px;
+      background: greenyellow;
+    }
+    .text-danger {
+      background: brown;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div v-bind:class="classObject"></div>
+  </div>
+<script>
+  new Vue({
+    el:'#app',
+    data:{
+      classObject:{
+        active: true,
+        'text-danger': false
+      }
+    }
+  })
+</script>
+</body>
+</html>
