@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>内联 JavaScript 语句</title>
+  <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <button v-on:click="say('hi')">say hi</button>
+    <button v-on:click="say('what')">say hello</button>
+  </div>
+  <script>
+    new Vue({
+      el: '#app',
+      methods: {
+        say: function (message) {
+          alert(message)
+        }
+      }
+    })
+  </script>
+
+</body>
+</html>
