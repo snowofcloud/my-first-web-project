@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>style直接设置样式</title>
+  <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <div v-bind:style="{ color:activeColor, fontSize:fontSize + 'px'}">这一章内容好多呀！</div>
+  </div>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        activeColor: 'green',
+        fontSize: 30
+      }
+    })
+  </script>
+
+</body>
+</html>

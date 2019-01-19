@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>直接绑定到一个样式对象</title>
+  <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <div v-bind:style="styleObject">今天学了好多vue的样式绑定内容</div>
+  </div>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        styleObject:{
+          color: 'greenyellow',
+          fontSize: '170px'
+        }
+      }
+    })
+  </script>
+
+</body>
+</html>
