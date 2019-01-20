@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用 directives 选项来注册局部指令</title>
+  <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+  <p>页面载入时，input 元素自动获取焦点：</p>
+  <input v-focus>
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    directives: {
+      //注册一个局部的自定义指令 v-focus
+      focus: {
+        //指令定义
+        inserted: function (el) {
+          el:focus()
+        }
+      }
+    }
+  })
+</script>
+
+</body>
+</html>
