@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>动态 Prop</title>
+  <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <div>
+      <input v-model="parentMsg">
+      <br>
+      <child v-bind:message="parentMsg"></child>
+    </div>
+  </div>
+  <script>
+    Vue.component('child',{
+      //声明 props
+      props: ['message'],
+      template: '<span>{{ message }}</span>'
+    })
+    new Vue({
+      el: 'app',
+      data: {
+        parentMsg: '父类组件'
+      }
+    })
+  </script>
+
+
+</body>
+</html>

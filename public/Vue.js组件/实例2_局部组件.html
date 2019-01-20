@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>局部组件</title>
+  <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <jingdong></jingdong>
+  </div>
+  <script>
+    var Child = {
+      template: '<h1>京东组件！</h1>'
+    }
+    //创建根实例
+    new Vue({
+      el: '#app',
+      components: {
+        //<jingdong> 将只在父模板中使用
+        'jingdong': Child
+      }
+    })
+  </script>
+</body>
+</html>

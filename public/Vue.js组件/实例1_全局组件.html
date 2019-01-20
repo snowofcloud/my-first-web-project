@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全局组件-自定义组件!</title>
+  <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <baidu></baidu>
+  </div>
+  <script>
+    //注册
+    Vue.component('baidu',{
+      template: '<h1>定义百度组件!</h1>'
+    })
+    //创建实例
+    new Vue({
+      el: '#app'
+    })
+  </script>
+
+</body>
+</html>
