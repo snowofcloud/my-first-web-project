@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>v-text等同于{{}}</title>
+  <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+  <style>
+    .style {
+      width: 100px;
+      height: 100px;
+      background: green;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div v-bind:style="object">{{ message }}</div>
+  </div>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        message: 'adsfghdu6rytjyg',
+        object: {
+          color: 'black',
+          fontSize: '70px'
+        }
+      }
+    })
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-model 实现双向数据绑定</title>
+  <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <p>input 元素：</p>
+    <div>请输入：<input v-model="message" placeholder="编辑我..."></div>
+    <p>消息是：{{ message }}</p>
+
+    <p>textarea 元素：</p>
+    <p style="white-space: pre">{{ message2 }}</p>
+    <textarea v-model="message2" placeholder="多行文本输入..."></textarea>
+  </div>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        message: 'come to here!',
+        message2: '百度---https://www.baidu.com'
+      }
+    })
+  </script>
+</body>
+</html>

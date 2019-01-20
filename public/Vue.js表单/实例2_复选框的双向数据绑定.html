@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>复选框的双向数据绑定</title>
+  <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <p>单个复选框</p>
+    <input type="checkbox" id="checkbox" v-model="checked">
+    <label for="checkbox">{{ checked }}</label>
+
+    <p>多个复选框</p>
+    <input type="checkbox" id="jingdong" value="jingdong" v-model="checkedNames">
+    <label for="jingdong">jingdong</label>
+    <input type="checkbox" id="taobao" value="taobao" v-model="checkedNames">
+    <label for="taobao">taobao</label>
+    <input type="checkbox" id="tenct" value="tenct" v-model="checkedNames">
+    <label for="tenct">tenct</label>
+    <br>
+    <hr>
+    <span>选择的值为：{{ checkedNames }}</span>
+  </div>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        checked: false,
+        checkedNames: []
+      }
+    })
+  </script>
+
+</body>
+</html>

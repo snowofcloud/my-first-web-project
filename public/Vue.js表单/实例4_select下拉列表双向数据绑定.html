@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>select下拉列表双向数据绑定</title>
+  <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <select v-model="selected" name="provinces">
+      <optiona value="">请选择一个省份</optiona>
+      <option value="1">浙江省</option>
+      <option value="2">江苏省</option>
+      <option value="3">上海市</option>
+    </select>
+    <div id="output">你选择的省份是：{{ selected }}</div>
+  </div>
+  <script>
+    new Vue ({
+      el: '#app',
+      data: {
+        selected: ''
+      }
+    })
+  </script>
+</body>
+</html>

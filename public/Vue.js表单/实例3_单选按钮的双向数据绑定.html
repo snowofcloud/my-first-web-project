@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>单选按钮的双向数据绑定</title>
+  <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+</head>
+<body>
+  <!--<div id="app">-->
+    <!--<label>性别：</label>-->
+    <!--<label for="male">男</label>-->
+    <!--<input type="radio" id="male" value="male" v-model="picked">-->
+    <!--<label for="female">女</label>-->
+    <!--<input type="radio" id="female" value="female" v-model="picked">-->
+  <!--</div>-->
+  <form id="app">
+    <label>性别：</label>
+    <label for="male">男</label>
+    <input type="radio" id="male" value="male" v-model="picked">
+    <label for="female">女</label>
+    <input type="radio" id="female" value="female" v-model="picked">
+  </form>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        picked: 'male'
+      }
+    })
+  </script>
+
+</body>
+</html>
