@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>可复用的方法或者计算属性</title>
+  <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+</head>
+<body>
+  <div id="databinding"></div>
+  <script type="text/javascript">
+    var vm = new Vue({
+      el: '#databinding',
+      data: {
+
+      },
+      methods:{
+
+      },
+    });
+    var  myMixin = {
+      created: function () {
+        this.startmixin()
+      },
+      methods: {
+        startmixin: function () {
+          document.write("混入实例");
+        }
+      }
+    };
+    var Component = Vue.extend({
+      mixins: [myMixin]
+    })
+    var comonent = new Component();
+  </script>
+</body>
+</html>
